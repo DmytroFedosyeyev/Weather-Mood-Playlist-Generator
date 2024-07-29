@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Mood Playlist Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Weather Mood Playlist Generator</h1>
+    <form id="playlist-form">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+        <label for="mood">Mood:</label>
+        <input type="text" id="mood" name="mood" required>
+        <button type="submit">Generate Playlist</button>
+    </form>
+    <ul id="playlist"></ul>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+ 
