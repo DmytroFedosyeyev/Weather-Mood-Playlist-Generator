@@ -5,10 +5,10 @@ import base64
 app = Flask(__name__)
 
 # Замените 'your_openweather_api_key' на ваш реальный API-ключ OpenWeather
-OPENWEATHER_API_KEY = 'b571467ac02141716798e4555baa2768'
+OPENWEATHER_API_KEY = '0000000000001'# here must be your key
 # Замените 'your_spotify_api_key' на ваш реальный API-ключ Spotify
-SPOTIFY_CLIENT_ID = '7d80b9a0c328494384da6585ad0ccf3b'
-SPOTIFY_CLIENT_SECRET = '198f778ea2f141b2a36bb81ad96527f5'
+SPOTIFY_CLIENT_ID = '00000000000002' # here must be your key
+SPOTIFY_CLIENT_SECRET = '0000000000003' # here must be your key
 
 def get_weather(city):
     url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={OPENWEATHER_API_KEY}'
