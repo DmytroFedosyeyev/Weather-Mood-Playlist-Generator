@@ -4,11 +4,10 @@ import base64
 
 app = Flask(__name__)
 
-# Замените 'your_openweather_api_key' на ваш реальный API-ключ OpenWeather
-OPENWEATHER_API_KEY = '0000000000001'# here must be your key
-# Замените 'your_spotify_api_key' на ваш реальный API-ключ Spotify
-SPOTIFY_CLIENT_ID = '00000000000002' # here must be your key
-SPOTIFY_CLIENT_SECRET = '0000000000003' # here must be your key
+OPENWEATHER_API_KEY = 'b571467ac02141716798e4555baa27 68'
+
+SPOTIFY_CLIENT_ID = ''
+SPOTIFY_CLIENT_SECRET = ''
 
 def get_weather(city):
     url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={OPENWEATHER_API_KEY}'
@@ -33,8 +32,7 @@ def get_playlist(weather, mood):
     headers = {
         'Authorization': f'Bearer {token}'
     }
-    # Пример запроса на получение плейлиста. Детали зависят от выбранного музыкального API
-    # Замените URL и параметры на соответствующие вашим нуждам
+
     url = 'https://api.spotify.com/v1/browse/featured-playlists'
     response = requests.get(url, headers=headers)
     playlists = response.json().get('playlists', {}).get('items', [])
